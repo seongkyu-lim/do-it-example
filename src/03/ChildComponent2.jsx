@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 class ChildComponent2 extends React.Component {
   render() {
-    const { objValue } = this.props;
+    const { objValue, requiredStringValue } = this.props;
 
     return (
       <div>
         <div>객체값: {String(Object.entries(objValue))}</div>
+        <div>필수값: {requiredStringValue}</div>
       </div>
     );
   }
@@ -18,6 +19,8 @@ ChildComponent2.propTypes = {
     name: PropTypes.string,
     age: PropTypes.number,
   }),
+
+  requireStringValue: PropTypes.string.isRequired,
 };
 
 export default ChildComponent2;
