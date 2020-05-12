@@ -1,20 +1,20 @@
 import React from 'react';
 
-import ChildComponent from './03/ChildComponent';
+import BooleanComponent from './03/BooleanComponent';
 
 class App extends React.Component {
   render() {
     return (
-      <ChildComponent
-        boolValue={true}
-        numValue={1}
-        arrayValue={[1, 2, 3]}
-        objValue={{ name: '제목', age: 30 }}
-        nodeValue={<h1>노드</h1>}
-        funcValue={() => {
-          console.log('메세지');
-        }}
-      />
+      <div>
+        <div>
+          <b>지루할 때:</b>
+          <BooleanComponent bored />
+        </div>
+        <div>
+          <b>즐거울 때</b>
+          <BooleanComponent />
+        </div>
+      </div>
     );
   }
 }
