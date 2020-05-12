@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import TodaysPlan from './03/TodaysPlan';
+import PropComponent from './03/PropsComponent';
 
-class App extends Component {
+class App extends React.Component {
   render() {
-    return (
-      <div className="body">
-        <TodaysPlan />
-      </div>
-    );
+    return <PropComponent name="do it react" />;
   }
 }
 
