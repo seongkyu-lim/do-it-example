@@ -29,6 +29,10 @@ class LifeCycleExample extends Component {
     console.log('render 호출');
     return null;
   }
+  componentDidMount() {
+    console.log('componentDidMount 호출');
+    this.setState({ updated: true });
+  }
 }
 
 export default LifeCycleExample;
