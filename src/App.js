@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Counter from './03/Counter';
+import LifeCycleExample from './03/LifeCycleExample';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Counter />
+        <LifeCycleExample />
       </div>
     );
   }
