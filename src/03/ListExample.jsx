@@ -9,6 +9,7 @@ class ListExample extends Component {
         <label>가격 목록</label>
         {prices}
       </div>
+      //또는 {prices} 대신에 {priceList.map((price) => <div>가격: {price}원</div>)}
     );
   }
 }
