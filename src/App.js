@@ -1,12 +1,12 @@
 import React from 'react';
 
-import LifeCycleExample from './03/LifeCycleExample';
+import Todolist from './03/Todolist';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <LifeCycleExample />
+        <Todolist />
       </div>
     );
   }
