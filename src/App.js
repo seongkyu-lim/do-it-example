@@ -1,14 +1,18 @@
 import React from 'react';
-
-import Todolist from './03/Todolist';
+import Counter2 from './03/Counter2';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 1,
+    };
+  }
+  increaseCount() {
+    this.setState(({ count }) => ({ count: count + 1 }));
+  }
   render() {
-    return (
-      <div>
-        <Todolist />
-      </div>
-    );
+    return <Counter2 count={this.state.count} onAdd={this.increaseCount.bind(this)} />;
   }
 }
 
