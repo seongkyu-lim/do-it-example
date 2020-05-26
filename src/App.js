@@ -1,18 +1,9 @@
 import React from 'react';
-import Counter2 from './03/Counter2';
+import ScrollSpy from './03/ScrollSpy';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 1,
-    };
-  }
-  increaseCount() {
-    this.setState(({ count }) => ({ count: count + 1 }));
-  }
   render() {
-    return <Counter2 count={this.state.count} onAdd={this.increaseCount.bind(this)} />;
+    return <ScrollSpy />;
   }
 }
 
