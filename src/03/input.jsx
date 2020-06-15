@@ -9,18 +9,18 @@ class Input extends PureComponent {
   }
   handleChange(e) {
     const { name, onChange } = this.props;
-    if (onChnage) {
+    if (onChange) {
       onChange(name, e.target.value);
     }
   }
   componentDidMount() {
-    if (this.props.autoFucus) {
-      this.refs.focus();
+    if (this.props.autoFocus) {
+      this.ref.focus();
     }
   }
   componentDidUpdate() {
     if (this.props.autoFocus) {
-      this.refs.focus();
+      this.ref.focus();
     }
   }
   setRef(ref) {
@@ -34,11 +34,12 @@ class Input extends PureComponent {
         <input
           id={`input_${name}`}
           ref={this.setRef}
-          onChnage={this.handleChange}
+          onChange={this.handleChange}
           onFocus={onFocus}
           value={value}
           type={type}
         />
+        {errorMessage && <span className="error">{errorMessage}</span>}
       </label>
     );
   }
@@ -50,7 +51,7 @@ Input.propTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   errorMessage: PropTypes.string,
   label: PropTypes.string,
-  onChnage: PropTypes.func,
+  onChange: PropTypes.func,
   onFocus: PropTypes.func,
   autoFocus: PropTypes.bool,
 };
