@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-class input extends PureComponent {
-  constructor(porps) {
+class Input extends PureComponent {
+  constructor(props) {
     super(props);
     this.setRef = this.setRef.bind(this);
-    this.handleChange = this.handleChnage.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
     const { name, onChange } = this.props;
@@ -61,4 +61,4 @@ Input.defaultProps = {
   type: 'text',
 };
 
-export default input;
+export default Input;
